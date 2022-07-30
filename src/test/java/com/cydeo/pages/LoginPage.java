@@ -5,10 +5,12 @@ import com.cydeo.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Locale;
 
-public class LoginPage {
+public class LoginPage extends BasePage{
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -23,22 +25,23 @@ public class LoginPage {
     public WebElement btnSignIn;
 
     /*The 'login' method will be called to stay into the application, after this you can execute your step scenarios.
-    * IMPORTANT: The method parameter is a String with value of 'student' or 'librarian'
-    * e.g.  LoginPage loginPage=new LoginPage();
-    *       loginPage.login("student");
-    * */
+     * IMPORTANT: The method parameter is a String with value of 'student' or 'librarian'
+     * e.g.  LoginPage loginPage=new LoginPage();
+     *       loginPage.login("student");
+     * */
     public void login(String userType) {
-        switch (userType.toLowerCase(Locale.ROOT)){
+        switch (userType.toLowerCase(Locale.ROOT)) {
             case "student":
                 tbxEmail.sendKeys(ConfigurationReader.getProperty("student.email"));
                 tbxPassword.sendKeys(ConfigurationReader.getProperty("student.password"));
-                btnSignIn.click();
                 break;
             case "librarian":
                 tbxEmail.sendKeys(ConfigurationReader.getProperty("librarian.email"));
                 tbxPassword.sendKeys(ConfigurationReader.getProperty("librarian.password"));
-                btnSignIn.click();
                 break;
         }
+        btnSignIn.click();
+        WebDriverWait waitOfAccess=new WebDriverWait(Driver.getDriver(),3);
+        waitOfAccess.until(ExpectedConditions.visibilityOf(btnLibrary));
     }
 }

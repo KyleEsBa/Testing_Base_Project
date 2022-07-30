@@ -28,7 +28,6 @@ public class LoginPage {
     *       loginPage.login("student");
     * */
     public void login(String userType) {
-        Driver.getDriver().navigate().to(ConfigurationReader.getProperty("login.url"));
         switch (userType.toLowerCase(Locale.ROOT)){
             case "student":
                 tbxEmail.sendKeys(ConfigurationReader.getProperty("student.email"));

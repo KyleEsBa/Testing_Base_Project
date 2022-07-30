@@ -44,4 +44,8 @@ public class Login {
     public void user_is_logged_as(String userType) {
         loginPage.login(userType);
     }
+
+    @Then("a")
+    public void a() {
+    }
 }

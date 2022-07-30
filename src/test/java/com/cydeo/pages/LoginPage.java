@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.Locale;
 
-public class LoginPage extends BasePage{
+public class LoginPage{
+    BasePage basePage=new BasePage();
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -42,6 +43,6 @@ public class LoginPage extends BasePage{
         }
         btnSignIn.click();
         WebDriverWait waitOfAccess=new WebDriverWait(Driver.getDriver(),3);
-        waitOfAccess.until(ExpectedConditions.visibilityOf(btnLibrary));
+        waitOfAccess.until(ExpectedConditions.visibilityOf(basePage.btnLibrary));
     }
 }

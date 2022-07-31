@@ -39,4 +39,13 @@ public class Login {
     public void user_should_see_as_title_of_the_page(String expectedTitle){
         BrowserUtilities.verifyTitle(Driver.getDriver(),expectedTitle);
     }
+
+    @Given("user is logged as {string}")
+    public void user_is_logged_as(String userType) {
+        loginPage.login(userType);
+    }
+
+    @Then("a")
+    public void a() {
+    }
 }

@@ -1,15 +1,11 @@
-package com.cydeo.utilities;
+package com.project.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.concurrent.TimeUnit;
-
 public class Driver {
-    //private constructor, we are closing access to the object
-    //of this clas from outside the class
     private Driver(){
 
     }

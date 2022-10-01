@@ -1,4 +1,4 @@
-package com.cydeo.runner;
+package com.project.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,11 +12,10 @@ import org.junit.runner.RunWith;
                 "json:target/jira-report.json",
                 "rerun:target/rerun.txt"
         },
-        features = "src/test/resources/features",
-        glue = "com/cydeo/step_definition",
-        dryRun = false,
-        tags = "@Student",
-        publish = true
+        //features: Path of features to be executed
+        features = "@target/rerun.txt",
+        //glue: Step definitions location
+        glue = "com/project/step_definition"
 )
-public class CukesRunner {
+public class FailedRunnerTest {
 }

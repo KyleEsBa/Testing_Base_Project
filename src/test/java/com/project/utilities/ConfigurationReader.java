@@ -1,14 +1,11 @@
-package com.cydeo.utilities;
+package com.project.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigurationReader {
-    //New object from Properties class, provides methods for handle the file
-    //priate for make it inaccesible from outside
     private static Properties properties=new Properties();
-    //having static block because static runs first
     static {
         try {
             //FileInputStream to open the file

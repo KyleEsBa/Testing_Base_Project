@@ -1,4 +1,4 @@
-package com.project.utilities;
+package com.test.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
+    //private constructor, we are closing access to the object
+    //of this clas from outside the class
     private Driver(){
 
     }

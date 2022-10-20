@@ -1,4 +1,4 @@
-package com.project.utilities;
+package com.test.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;

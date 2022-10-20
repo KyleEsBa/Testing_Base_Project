@@ -1,4 +1,4 @@
-package com.project.runner;
+package com.test.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt"
         },
         features = "src/test/resources/features",
-        glue = "com/project/step_definition",
+        glue = "com/test/step_definition",
         dryRun = false,
         tags = "@wip",
         publish = true

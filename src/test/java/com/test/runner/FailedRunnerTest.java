@@ -1,4 +1,4 @@
-package com.project.runner;
+package com.test.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         //features: Path of features to be executed
         features = "@target/rerun.txt",
         //glue: Step definitions location
-        glue = "com/project/step_definition"
+        glue = "com/test/step_definition"
 )
 public class FailedRunnerTest {
 }

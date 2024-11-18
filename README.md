@@ -1,5 +1,4 @@
 # <p style="text-align: center;">Java Test Automation Framework</p>
-***
 This Java based Test Automation Framework is designed for scalability, maintainability, and ease of use. 
 It follows conventions and structured design patterns that supports Gherkin language for writing user friendly, 
 test scenarios. Built with widely supported open source tools, it ensures reliability and flexibility 

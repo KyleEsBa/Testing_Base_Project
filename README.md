@@ -19,7 +19,7 @@ Implementation of automated test scripts
 ├── src/test/
 │   ├── java/com/test/
 │   │   ├── step_definition/        # Test steps
-│   │   ├── pages/                  # Page Object Models (if applicable)
+│   │   ├── pages/                  # Page Object Models
 │   │   ├── utilities/              # Customized methods
 │   │   ├── runner/                 # Run configurations              
 │   ├── resources/features/         # Test Scenarios

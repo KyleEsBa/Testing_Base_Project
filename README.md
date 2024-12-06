@@ -55,4 +55,5 @@ Implementation of automated test scripts
 6. Set the locators of the test in a page class
 7. Execute on the CukesRunner class
 
+
 ***Happy Testing!***
